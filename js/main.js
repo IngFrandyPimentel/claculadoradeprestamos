@@ -24,7 +24,7 @@ function calcular(){
     else{
         alerta.classList.remove("desaparece","alert-primary");
         alerta.classList.add("aparece","alert-danger");
-        alerta.innerHTML="Todos los campos son nesesarios";
+        alerta.innerHTML="Todos los campos son requeridos";
     }
 
    
