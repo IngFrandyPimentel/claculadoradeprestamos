@@ -1,0 +1,21 @@
+.aparece{
+    visibility:visible;
+}
+
+.desaparece{
+    visibility: hidden;
+}
+
+.container{
+    width: 50%;
+}
+
+.imagenes>img{
+    width: 100px;
+}
+
+.imagenes{
+    display: flex;
+    justify-content:center;
+    
+}
