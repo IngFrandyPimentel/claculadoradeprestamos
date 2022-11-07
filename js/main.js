@@ -10,14 +10,16 @@ function calcular(){
         //calculos
         var interesMensual=interes/12;
         var iM=interesMensual/100;
-        
+
         //formula
         var cuota= monto*Math.pow((1+iM),tiempo)*iM / (Math.pow((1+iM),tiempo) -1 );
+        
 
         //aplicamos clases a la alerta
         alerta.classList.remove("desaparece","alert-danger");
         alerta.classList.add("alert-primary","aparece");
-        alerta.innerHTML=`La cuota mensual es de RD$ <b>${cuota.toFixed(2)}</b>`;
+      
+        alerta.innerHTML=`Cuota mensual estimada: <b>${cuota.toLocaleString('en-US', { style: 'currency', currency: 'DOP' })}</b>`;
     }
     else{
         alerta.classList.remove("desaparece","alert-primary");
@@ -29,9 +31,6 @@ function calcular(){
 }
 
 btn.addEventListener('click', calcular);
-
-
-
 
 
 
