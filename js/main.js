@@ -13,13 +13,14 @@ function calcular(){
 
         //formula
         var cuota= monto*Math.pow((1+iM),tiempo)*iM / (Math.pow((1+iM),tiempo) -1 );
-        
+        var interesCobrado=cuota*tiempo-monto;
 
         //aplicamos clases a la alerta
         alerta.classList.remove("desaparece","alert-danger");
         alerta.classList.add("alert-primary","aparece");
-      
-        alerta.innerHTML=`Cuota mensual estimada: <b>${cuota.toLocaleString('en-US', { style: 'currency', currency: 'DOP' })}</b>`;
+
+        //mostramos resultados
+        alerta.innerHTML=`Cuota mensual estimada: <b>${cuota.toLocaleString('en-US', { style: 'currency', currency: 'DOP' })}</b><br> Total del interés pagado: <b>${interesCobrado.toLocaleString('en-US', { style: 'currency', currency: 'DOP' })}</b>`;
     }
     else{
         alerta.classList.remove("desaparece","alert-primary");
@@ -39,6 +40,6 @@ btn.addEventListener('click', calcular);
 /*         
                    (1+interes)^n.interes
     cuota=monto.    ____________________ 
-                    (1+interes)-1
+                    (1+interes)^n-1
     
 */
