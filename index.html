@@ -19,7 +19,7 @@
         
             <h1 class="display-5  mb-5 " >Calculadora de prestamos </h1>
 
-            <input  type="number" placeholder="Digite el Monto" class="form-control w-75 " data-monto required >
+            <input  type="text" placeholder="Digite el Monto" class="form-control w-75 " data-monto required   onkeydown="return soloNumeros(event)" >
             <input type="number" placeholder="Digite la tasa de interes anual" class="form-control w-75 my-2" data-interes >
             <input type="number" placeholder="Digite el tiempo en meses"class="form-control w-75" data-tiempo required>
 
